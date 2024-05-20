@@ -1,0 +1,264 @@
+@charset "UTF-8";
+/*shitumon
+
+1.消えないborder(.size-color)
+2.プルダウンの初期右端の記号はどうやって表示？（.quantity)
+--------------------------*/
+/*common
+--------------------------*/
+html {
+  font-size: 100%;
+}
+
+body {
+  max-width: 1000px;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*header
+------------------------*/
+header {
+  height: 144.47px;
+  margin-bottom: 50px;
+}
+
+header .logo {
+  max-width: 800px;
+  height: 100.47px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+header .logo img {
+  width: 108.93px;
+  height: 17.86px;
+  margin-top: 46.3px;
+}
+
+header nav {
+  max-width: 800px;
+  height: 18px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #C3C3C3;
+  padding-bottom: 26px;
+}
+
+header nav li {
+  margin-right: 14px;
+}
+
+header nav .main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+header nav .shopping-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+header nav .shopping-nav .contact {
+  margin-right: 0px;
+}
+
+#item {
+  max-width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 auto;
+}
+
+#item .item-image img {
+  width: 400px;
+  height: 500px;
+}
+
+#item .item-description {
+  width: 340px;
+  margin: 0 auto;
+}
+
+#item .item-description h1 {
+  font-weight: bold;
+  font-size: 16px;
+  border-top: 1px solid #C3C3C3;
+  border-bottom: 1px solid #C3C3C3;
+  padding: 18px 0;
+}
+
+#item .item-description .item-about {
+  margin-top: 20px;
+  line-height: 22px;
+}
+
+#item .item-description .item-price {
+  line-height: 21px;
+  margin-top: 30px;
+}
+
+#item .item-description .size-color {
+  width: 340px;
+  margin-top: 30px;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+#item .item-description .size-color th, #item .item-description .size-color td {
+  font-weight: normal;
+  text-align: center;
+  padding: 10px 0;
+}
+
+#item .item-description .size-color th:not(:last-child), #item .item-description .size-color td:not(:last-child) {
+  border-right: 1px solid #C3C3C3;
+}
+
+#item .item-description .size-color tr {
+  border-bottom: 0 none;
+  border-right: 0 none;
+}
+
+#item .item-description .size-color tr:not(:last-child) {
+  border-bottom: 1px solid #C3C3C3;
+}
+
+#item .item-description thead {
+  width: 100%;
+  border-bottom: 1px solid #C3C3C3;
+}
+
+#item .item-description thead .none {
+  width: 204px;
+}
+
+#item .item-description tbody {
+  width: 340px;
+}
+
+#item .item-description tbody .quantity {
+  width: 184px;
+  height: 18px;
+  border: 1px solid #C3C3C3;
+  -webkit-appearance: auto;
+     -moz-appearance: auto;
+          appearance: auto;
+}
+
+#item a {
+  color: #FFFFFF;
+  text-align: center;
+  padding: 18px 0;
+}
+
+#item .to-cart {
+  display: block;
+  width: 340px;
+  margin-top: 20px;
+  background-color: #4B4B4B;
+}
+
+#item .size-guide {
+  width: 340px;
+  height: 152px;
+  margin-top: 30px;
+  margin-bottom: 90.03px;
+  border-collapse: collapse;
+  border: 1px solid #C3C3C3;
+}
+
+#item .size-guide th, #item .size-guide td {
+  font-weight: normal;
+  text-align: center;
+  padding: 10px 0;
+  border: 1px solid #C3C3C3;
+}
+
+#item .size-guide .size-tr {
+  background-color: #ECEBEB;
+}
+
+footer {
+  max-width: 800px;
+  height: 30px;
+  margin: 0 auto;
+}
+
+footer .copyright {
+  font-size: 10px;
+  line-height: 15px;
+  text-align: center;
+}
+
+/*mobile
+--------------------------*/
+@media (max-width: 896px) {
+  header {
+    height: 100.5px;
+  }
+  header .logo {
+    max-width: 336px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  header .logo img {
+    margin-top: 36.3px;
+  }
+  header nav {
+    margin: 0 auto;
+    width: 336px;
+    overflow: auto;
+    white-space: nowrap;
+  }
+  #item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #item .item-image {
+    margin-bottom: 10px;
+  }
+  #item .item-image img {
+    width: 375px;
+    height: 468px;
+    margin: 0 auto;
+  }
+  #item .item-description {
+    max-width: 336px;
+  }
+  footer {
+    max-width: 336px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

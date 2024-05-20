@@ -1,0 +1,222 @@
+@charset "utf-8";
+
+/*shitumon
+
+1.消えないborder(.size-color)
+2.プルダウンの初期右端の記号はどうやって表示？（.quantity)
+--------------------------*/
+
+/*common
+--------------------------*/
+html{
+    font-size: 100%;
+}
+body{
+    max-width: 1000px;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+
+/*header
+------------------------*/
+header{
+    height: 144.47px;
+    margin-bottom: 50px;
+    .logo{
+        max-width: 800px;
+        height: 100.47px;
+        text-align: center;
+        margin: 0 auto;
+        img{
+            width: 108.93px;
+            height: 17.86px;
+            margin-top: 46.3px;
+        }
+    }
+    nav{
+        max-width: 800px;
+        height: 18px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #C3C3C3;
+        padding-bottom: 26px;
+        li{
+            margin-right: 14px;
+        }
+        .main-nav{
+            display: flex;
+            flex-direction: row;
+        }
+        .shopping-nav{
+            display: flex;
+            flex-direction: row;
+            .contact{
+                margin-right: 0px;
+            }
+        }
+    }
+}
+
+#item{
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    .item-image{
+        img{
+            width: 400px;
+            height: 500px;
+        }
+    }
+    .item-description{
+        width: 340px;
+        margin: 0 auto;
+        h1{
+            font-weight: bold;
+            font-size: 16px;
+            border-top: 1px solid #C3C3C3;
+            border-bottom: 1px solid #C3C3C3;
+            padding: 18px 0;
+        }
+        .item-about{
+            margin-top: 20px;
+            line-height: 22px;
+        }
+        .item-price{
+            line-height: 21px;
+            margin-top: 30px;
+        }
+
+        .size-color{
+            width: 340px;
+            margin-top: 30px;
+            text-align: center;
+            border-collapse: collapse;
+            th,td{
+                font-weight: normal;
+                text-align: center;
+                padding: 10px 0;
+                &:not(:last-child){
+                    border-right: 1px solid #C3C3C3;
+                }
+            }
+
+            tr{
+                border-bottom: 0 none;
+                border-right: 0 none;
+                &:not(:last-child){
+                    border-bottom: 1px solid #C3C3C3;
+                }
+            }
+        }
+            thead{
+                width: 100%;
+                border-bottom: 1px solid #C3C3C3;
+                .none{
+                    width: 204px;
+                }
+            }
+            tbody{
+                width: 340px;
+                .quantity{
+                    width: 184px;
+                    height: 18px;
+                    border: 1px solid #C3C3C3;
+                    appearance:auto;
+                }    
+            }
+        }
+
+        a{
+            color: #FFFFFF;
+            text-align: center;
+            padding: 18px 0;
+        }
+        .to-cart{
+            display: block;
+            width: 340px;
+            margin-top: 20px;
+            background-color: #4B4B4B;
+        }
+
+        .size-guide{
+            width: 340px;
+            height: 152px;
+            margin-top: 30px;
+            margin-bottom: 90.03px;
+            border-collapse: collapse;
+            border: 1px solid #C3C3C3;
+            th,td{
+                font-weight: normal;
+                text-align: center;
+                padding: 10px 0;
+                border: 1px solid #C3C3C3;
+                
+            }
+            .size-tr{
+                background-color: #ECEBEB; 
+            }
+        }
+    }
+
+
+footer{
+    max-width: 800px;
+    height: 30px;
+    margin: 0 auto;
+    .copyright{
+        font-size: 10px;
+        line-height: 15px;
+        text-align: center;
+    }
+}
+
+
+/*mobile
+--------------------------*/
+@media (max-width: 896px){
+
+    header{
+        height: 100.5px;
+        .logo{
+            max-width: 336px;
+            margin: 0 auto;
+            text-align: center;
+            img{
+                margin-top: 36.3px;
+            }
+        }
+        nav{
+            margin: 0 auto;
+            width: 336px;
+            overflow: auto;
+            white-space: nowrap;
+        }
+    }
+    #item{
+        flex-direction: column;
+        .item-image{
+            margin-bottom: 10px;
+            img{
+                width: 375px;
+                height: 468px;
+                margin: 0 auto;
+            }
+        }
+        .item-description{
+            max-width: 336px;
+            
+        }
+    }
+    footer{
+        max-width: 336px;
+    }
+}
